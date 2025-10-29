@@ -67,6 +67,14 @@ pipeline {
                 echo "Simulating deployment of version ${APP_VERSION} to ${params.ENVIRONMENT}"
             }
         }
+
+    stage('Print Student Name') {
+    steps {
+        echo "Pipeline executed by: ${params.STUDENT_NAME}"
+    }
+}
+
+        
     }
 
     post {
