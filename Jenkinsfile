@@ -36,11 +36,11 @@ pipeline {
             steps {
                 echo "Building version ${APP_VERSION} for ${params.ENVIRONMENT} environment"
                 sh '''
-                echo "Simulating build process..."
                 mkdir -p build
-                cp src/*.js build/
+                cp *.js build/
                 echo "Build completed successfully!"
                 echo "App version: ${APP_VERSION}" > build/version.txt
+
                 '''
             }
         }
